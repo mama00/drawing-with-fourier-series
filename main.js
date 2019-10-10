@@ -15,7 +15,7 @@ function setup(){
 
     /*
     for(let i=0;i<rose.length;i+=2)
-        points.push(new vector(train[i],train[i+1])); //getting all the points
+        points.push(new vector(rose[i],rose[i+1])); //getting all the points
         //other list of point are in other format
 
     */  
