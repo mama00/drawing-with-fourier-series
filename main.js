@@ -9,16 +9,15 @@ let points=[]
 let dft;
 
 function setup(){
-    translate(200,300);
-    for(let i=0;i<train.length;i+=10)
-        points.push(new vector(train[i].x,train[i].y)); //getting all the points
+    translate(100,200);
+    // for(let i=0;i<train.length;i+=10)
+    //     points.push(new vector(train[i].x,train[i].y)); //getting all the points
 
-    /*
+    
     for(let i=0;i<rose.length;i+=2)
         points.push(new vector(rose[i],rose[i+1])); //getting all the points
         //other list of point are in other format
 
-    */  
     dft=discretFourierTransform(points); //calculating fourier coeficient
     createCanvas(800,600);
     noFill();
@@ -36,7 +35,7 @@ function draw(){
     // Drawing all the circle one after other for each element of time
     for(i=0;i<constante;i++){
         phase=dft[i].angle;
-        magnitude=dft[i].magnitude;   
+        magnitude=dft[i].magnitude/2;   
         strokeWeight(0.5);
         circle(prevx,prevy,magnitude*2);
         strokeWeight(1);
